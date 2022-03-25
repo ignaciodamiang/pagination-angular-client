@@ -1,0 +1,38 @@
+h2 {
+  color: orange;
+}
+
+th:nth-child(1) {
+  width: 10%;
+}
+th:nth-child(2) {
+  width: 40%;
+}
+th:nth-child(3) {
+  width: 40%;
+}
+th:nth-child(4) {
+  width: 10%;
+}
+
+.numberPages,
+.title-field {
+  color: white;
+}
+
+.title-field:hover,
+.bi-arrow-down-up:hover,
+.previous:hover,
+.next:hover,
+.numberPages:hover {
+  cursor: pointer;
+  color: orange;
+}
+
+.title-field:active,
+.bi-arrow-down-up:active,
+.previous:active,
+.next:active,
+.numberPages:active {
+  color: red;
+}

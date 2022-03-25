@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <h2 class="text-center text-decoration-underline fw-bold mb-3">Countries</h2>
+  <table
+    class="table table-dark table-striped table-responsive-md text-nowrap text-center"
+  >
+    <thead>
+      <tr>
+        <th class="title-field" scope="col" (click)="setOrder('id')">ID</th>
+        <th class="title-field" scope="col" (click)="setOrder('name')">Name</th>
+        <th class="title-field" scope="col" (click)="setOrder('capital')">
+          Capital
+        </th>
+        <th scope="col">
+          <i class="bi bi-arrow-down-up" (click)="sort()"></i>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countries">
+        <th scope="row">{{ country.id }}</th>
+        <td>{{ country.name }}</td>
+        <td>{{ country.capital }}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <span class="previous" (click)="previous()"
+            ><i class="bi bi-arrow-left-short"></i> Previous</span
+          >
+        </td>
+        <td colspan="2">
+          <span *ngFor="let page of totalPages; let i = index">
+            <a
+              class="numberPages text-decoration-none mx-2"
+              (click)="setPage(i)"
+              [ngClass]="{ 'text-warning': pageNumber === i }"
+              >{{ i + 1 }}</a
+            >
+          </span>
+        </td>
+        <td>
+          <span class="next" (click)="next()"
+            >Next <i class="bi bi-arrow-right-short"></i
+          ></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

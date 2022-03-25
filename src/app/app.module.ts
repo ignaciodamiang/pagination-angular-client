@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CountriesComponent } from './components/countries/countries.component';
 
-import {HttpClientModule} from  '@angular/common/http';
+import { HttpClientModule } from  '@angular/common/http';
 
 @NgModule({
   declarations: [
